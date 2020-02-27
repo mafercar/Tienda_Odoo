@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+
+    <data>
+
+        <act_window id="lineas_facturas_action" name="lineas_facturas" res_model="linea_factura" />
+
+        <record id="lineas_facturas_view_tree" model="ir.ui.view">
+
+            <field name="name">Lineas de facturas</field>
+            <field name="model">linea_factura</field>
+            <field name="arch" type="xml">
+
+                <tree>
+
+                    <field name="identificador" />
+                    <field name="identificadorFactura" />
+                    <field name="producto" />
+                    <field name="cantidad" />
+                    <field name="precio" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="lineas_facturas_view_search" model="ir.ui.view">
+
+            <field name="name">Lineas de facturas</field>
+            <field name="model">linea_factura</field>
+            <field name="arch" type="xml">
+
+                <search>
+
+                    <field name="identificador" />
+                    <field name="identificadorFactura" />
+                    <field name="producto" />
+                    <field name="cantidad" />
+                    <field name="precio" />
+                </search>
+            </field>
+        </record>
+
+        <menuitem name="Lineas de facturas" id="menu_lineas_facturas" parent="menu_tienda" action="lineas_facturas_action" sequence="10"/>
+    </data>
+</odoo>

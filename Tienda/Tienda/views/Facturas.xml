@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+
+    <data>
+
+        <act_window id="facturas_action" name="facturas" res_model="factura" />
+
+        <record id="facturas_view_tree" model="ir.ui.view">
+
+            <field name="name">Facturas</field>
+            <field name="model">factura</field>
+            <field name="arch" type="xml">
+
+                <tree>
+
+                    <field name="identificador" />
+                    <field name="lineas_factura" />
+                    <field name="precio" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="facturas_view_search" model="ir.ui.view">
+
+            <field name="name">Facturas</field>
+            <field name="model">factura</field>
+            <field name="arch" type="xml">
+
+                <search>
+
+                    <field name="identificador" />
+                    <field name="lineas_factura" />
+                    <field name="precio" />
+                </search>
+            </field>
+        </record>
+
+        <menuitem name="Facturas" id="menu_facturas" parent="menu_tienda" action="facturas_action" sequence="10"/>
+    </data>
+</odoo>
